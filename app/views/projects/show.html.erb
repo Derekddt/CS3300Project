@@ -62,7 +62,7 @@ div {
 
 
 <div class="destroyProject" align="right"> 
-  <a class="button-red"> <%= button_to "Destroy this project", @project, method: :delete %> </a>
+  <%= button_to "Destroy this project", @project, class: "button-red", method: :delete %>
 </div>
 
 

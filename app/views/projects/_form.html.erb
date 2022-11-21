@@ -1,3 +1,20 @@
+<style>
+  .button-green {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 0.8em 2em;
+    text-align: left;
+    text-decoration: underline;
+    display: inline-block;
+    font-size: 1em;
+    margin: 0.25em 0.125em;
+    cursor: pointer;
+    border: 2px solid black;
+  }
+</style>
+
+
 <%= form_with(model: project) do |form| %>
   <% if project.errors.any? %>
     <div style="color: red">
@@ -22,7 +39,7 @@
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit 'Submit', :class => 'button-green' %>
   </div>
 <% end %>
 
