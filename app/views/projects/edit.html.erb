@@ -1,3 +1,29 @@
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+
+body {
+  background-color: lightgreen;
+}
+a:link, a:visited {
+  align: left;
+  background-color: blue;
+  color: white;
+  padding: 3em 10em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid black;
+  font-size: 1.5em;
+  margin-top: 4.5em;
+}
+
+
+
+
+</style>
+
 <h1>Editing project</h1>
 
 <%= render "form", project: @project %>
@@ -5,6 +31,7 @@
 <br>
 
 <div>
-  <%= link_to "Show this project", @project %> |
   <%= link_to "Back to projects", projects_path %>
+  <%= link_to "Show this project", @project %> 
 </div>
+

@@ -1,10 +1,68 @@
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+
+body {
+  background-color: lightgreen;
+}
+
+a:link, a:visited {
+  align: left;
+  background-color: blue;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid black;
+}
+
+.button-red {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 0.8em 2em;
+  text-align: left;
+  text-decoration: underline;
+  display: inline-block;
+  font-size: 1em;
+  margin: 0.25em 0.125em;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+div {
+  margin: 5em;
+}
+
+.destroyProject {
+  margin-top: -8.5em;
+  margin-right: 20em
+}
+
+.backProject {
+  margin-top: 20em;
+  margin-left: 20em;
+}
+
+
+
+</style>
+
+
 <p style="color: green"><%= notice %></p>
 
 <%= render @project %>
 
-<div>
-  <%= link_to "Edit this project", edit_project_path(@project) %> |
+<div class="backProject">
   <%= link_to "Back to projects", projects_path %>
-
-  <%= button_to "Destroy this project", @project, method: :delete %>
+  <%= link_to "Edit this project", edit_project_path(@project)%> 
 </div>
+
+
+
+<div class="destroyProject" align="right"> 
+  <a class="button-red"> <%= button_to "Destroy this project", @project, method: :delete %> </a>
+</div>
+
+
