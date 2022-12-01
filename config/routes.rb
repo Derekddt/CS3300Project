@@ -10,7 +10,7 @@
 Rails.application.routes.draw do
   devise_for :users
   #Changed from root "projects#index" to root "home#index"
-  root "home#index"
+  root "projects#index"
   resources :projects
 
   #step 1 of iteration 4 PJ instructions?
